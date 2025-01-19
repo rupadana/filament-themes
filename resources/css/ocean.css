@@ -1,0 +1,31 @@
+@import '../../vendor/filament/filament/resources/css/theme.css';
+
+@config './tailwind.config.js';
+
+.fi-sidebar-header {
+    @apply dark:!bg-slate-800 !ring-0 !shadow-none;
+}
+
+.fi-sidebar {
+    @apply dark:!bg-slate-800;
+}
+
+.fi-topbar > nav{
+    @apply dark:!bg-slate-800 !shadow-none !ring-0;
+}
+
+
+.fi-main {
+    @apply rounded-tl-2xl dark:!bg-gray-950 overflow-hidden !bg-gray-50;
+    border: solid 0;
+    min-height:100%;
+}
+
+body {
+    @apply dark:!bg-slate-800 !bg-white;
+}
+
+
+.fi-sidebar-nav {
+    @apply bg-white dark:bg-slate-800;
+}

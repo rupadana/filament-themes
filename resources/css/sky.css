@@ -1,0 +1,51 @@
+@import '../../vendor/filament/filament/resources/css/theme.css';
+
+@config './tailwind.config.js';
+
+body {
+    @apply !text-white;
+}
+
+/*.fi-main-ctn {*/
+/*    @apply bg-gray-950;*/
+/*}*/
+
+.fi-sidebar, .fi-sidebar header {
+    @apply dark:!bg-sky-950 !bg-sky-300;
+}
+
+.fi-sidebar-header {
+    @apply bg-transparent !ring-0 !shadow-none;
+}
+
+.fi-logo {
+    @apply !text-secondary-500;
+}
+
+.fi-topbar nav {
+    @apply !ring-0 !shadow-none;
+}
+
+.fi-sidebar-item a, .fi-sidebar-item svg {
+    @apply !text-success-200;
+}
+
+.fi-sidebar-item-active a {
+    @apply !bg-gray-950 dark:!text-secondary-500;
+}
+
+.fi-sidebar-item-active svg {
+    @apply !text-secondary-500;
+}
+
+.fi-header-heading {
+    @apply dark:!text-secondary-500;
+}
+
+.fi-section-header-heading, .fi-ta-header-heading {
+    @apply dark:!text-secondary-500;
+}
+
+.fi-breadcrumbs li a {
+    @apply !text-success-500;
+}
