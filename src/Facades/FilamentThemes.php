@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method mixed getThemes()
+ *
  * @see \Rupadana\FilamentThemes\FilamentThemes
  */
 class FilamentThemes extends Facade

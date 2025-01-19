@@ -44,7 +44,7 @@ class FilamentThemesServiceProvider extends PackageServiceProvider
     public function packageRegistered(): void
     {
         $this->app->singleton(FilamentThemes::class, function () {
-            return new FilamentThemes();
+            return new FilamentThemes;
         });
     }
 
@@ -81,7 +81,7 @@ class FilamentThemesServiceProvider extends PackageServiceProvider
 
                         return [
                             ...$assets,
-                            ...$asset
+                            ...$asset,
                         ];
                     },
                 );

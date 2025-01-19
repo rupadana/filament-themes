@@ -2,7 +2,6 @@
 
 namespace Rupadana\FilamentThemes\Themes;
 
-
 use Filament\Panel;
 use Filament\Support\Assets\Css;
 use Filament\Support\Colors\Color;
@@ -14,20 +13,20 @@ class Ocean extends Theme
 
     public function getName(): string
     {
-        return "ocean";
+        return 'ocean';
     }
 
     public function register(Panel $panel): void
     {
         $panel->colors([
-            'primary' => Color::Orange
+            'primary' => Color::Orange,
         ]);
     }
 
     public function getAssets(): array
     {
         return [
-            Css::make($this->getName(), __DIR__ . '/../../resources/dist/ocean.css')
+            Css::make($this->getName(), __DIR__ . '/../../resources/dist/ocean.css'),
         ];
     }
 }

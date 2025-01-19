@@ -5,7 +5,6 @@ namespace Rupadana\FilamentThemes;
 use Filament\Contracts\Plugin;
 use Filament\Panel;
 use Illuminate\Support\Facades\Storage;
-use Rupadana\FilamentThemes\Pages\PanelSetting;
 use Rupadana\FilamentThemes\Pages\Theme as PagesTheme;
 
 class FilamentThemesPlugin implements Plugin
@@ -20,7 +19,6 @@ class FilamentThemesPlugin implements Plugin
         $data = Storage::disk('local')->get('panel-' . $panel->getId() . '-data.json');
         $data = json_decode($data, true) ?? [];
 
-
         $panel->pages([
             PagesTheme::class,
         ]);
@@ -29,19 +27,20 @@ class FilamentThemesPlugin implements Plugin
             app(FilamentThemes::class)->enableTheme($data['theme']);
         }
 
-
         app(FilamentThemes::class)->getEnabledTheme()->register($panel);
     }
 
     public function enableTheme(string $theme = 'default')
     {
         app(FilamentThemes::class)->enableTheme($theme);
+
         return $this;
     }
 
     public function registerThemes(array $themes = [])
     {
         app(FilamentThemes::class)->themes($themes);
+
         return $this;
     }
 

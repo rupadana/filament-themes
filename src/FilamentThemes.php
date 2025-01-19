@@ -12,7 +12,7 @@ use Rupadana\FilamentThemes\Themes\Sky;
 
 class FilamentThemes
 {
-    protected Collection | null $themes = null;
+    protected ?Collection $themes = null;
 
     protected $enableThemeName = 'default';
 
@@ -23,13 +23,13 @@ class FilamentThemes
         $this->themes = collect([
             Sky::make()->getName() => Sky::class,
             Ocean::make()->getName() => Ocean::class,
-            Nord::make()->getName() => Nord::class
+            Nord::make()->getName() => Nord::class,
         ]);
     }
 
     public static function make(): static
     {
-        return new static();
+        return new static;
     }
 
     public function getEnabledTheme(): Theme
@@ -63,6 +63,7 @@ class FilamentThemes
     public function themes(array $themes): FilamentThemes
     {
         $this->themes = $this->themes->merge($themes);
+
         return $this;
     }
 
@@ -93,7 +94,7 @@ class FilamentThemes
 
         return $this->getStorageDisk()->put('panel-' . Filament::getCurrentPanel()->getId() . '-data.json', json_encode([
             ...$this->getCurrentActivatedData(),
-            'theme' => $theme
+            'theme' => $theme,
         ]));
     }
 }

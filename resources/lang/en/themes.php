@@ -4,5 +4,5 @@
 return [
     'navigation' => [
         'group' => 'Panel Setting',
-    ]
+    ],
 ];

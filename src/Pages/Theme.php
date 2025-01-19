@@ -2,18 +2,8 @@
 
 namespace Rupadana\FilamentThemes\Pages;
 
-use Filament\Facades\Filament;
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\Grid;
-use Filament\Forms\Components\MarkdownEditor;
-use Filament\Forms\Components\Select;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Concerns\InteractsWithForms;
-use Filament\Forms\Contracts\HasForms;
-use Filament\Forms\Form;
 use Filament\Notifications\Notification;
 use Filament\Pages\Page;
-use Illuminate\Support\Facades\Storage;
 use Rupadana\FilamentThemes\FilamentThemes;
 
 class Theme extends Page
@@ -38,6 +28,7 @@ class Theme extends Page
                 ->title('Theme already enabled')
                 ->info()
                 ->send();
+
             return;
         }
 
